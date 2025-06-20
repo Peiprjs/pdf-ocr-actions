@@ -1,0 +1,19 @@
+name: OCR my PDF
+
+on:
+  push:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
+jobs:
+  ocr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Installs OCR my PDF
+        run: apt install ocrmypdf
+      - name: OCR any PDFs in 
+        run: ./ocr.sh
+      - name: Clean up 
+        run: ./cleanup.sh        
