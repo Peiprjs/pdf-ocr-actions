@@ -11,12 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: LS 
+        run: ls
       - name: Installs OCR my PDF
         run: |
               sudo apt update 
               sudo apt install ocrmypdf
-      - name: LS 
-        run: ls
+
       - name: OCR any PDFs in input
         run: ./ocr.sh
       - name: Clean up 
