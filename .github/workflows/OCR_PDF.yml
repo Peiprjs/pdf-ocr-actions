@@ -15,7 +15,9 @@ jobs:
         run: |
               sudo apt update 
               sudo apt install ocrmypdf
-      - name: OCR any PDFs in 
+      - name: LS 
+        run: ls
+      - name: OCR any PDFs in input
         run: ./ocr.sh
       - name: Clean up 
         run: ./cleanup.sh        
