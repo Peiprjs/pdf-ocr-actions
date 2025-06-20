@@ -1,4 +1,5 @@
-for file in `ls input --format=single-column --group-directories-first`
+cd input
+for file in `ls --format=single-column --group-directories-first`
 do
 	echo $folder
 	cd $folder
