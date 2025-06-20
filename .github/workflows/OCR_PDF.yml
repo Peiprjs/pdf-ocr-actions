@@ -11,8 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Clean up 
-        run: ./cleanup.sh        
+      
       - name: Installs OCR my PDF
         run: |
               sudo apt update 
@@ -21,3 +20,5 @@ jobs:
       - name: OCR any PDFs in input
         run: ./ocr.sh
 
+      - name: Clean up 
+        run: ./cleanup.sh  
