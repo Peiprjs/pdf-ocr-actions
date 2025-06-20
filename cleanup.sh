@@ -1,3 +1,3 @@
 mv input/*.pdf output
-ls input
-ls output
+echo "input" & ls input
+echo "output" & ls output
